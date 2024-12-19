@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Liste des Jeux {% endblock %}
+
+{% block body %}
+    <table>
+        <thead>
+        <tr>
+            <th>NOM</th>
+            <th>AUTEUR</th>
+            <th>NB DE JOUEURS</th>
+            <th>AGE MINIMUM</th>
+            <th>EDITEUR</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for jeu in jeux %}
+            <tr>
+                <td>{{ jeu.nom }}</td>
+                <td>{{ jeu.auteur }}</td>
+                <td>{{ jeu.joueurs }} €</td>
+                <td>{{ jeu.age}}</td>
+                <td>{{ jeu.editeur }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
